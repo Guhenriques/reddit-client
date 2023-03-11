@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  background-color: whitesmoke;
+}
+
+.header .search-bar {
+  margin: auto;
+  width: 50%;
+}
+
+.header .search-bar #search {
+  height: 30px;
+  width: 400px;
+  border-radius: 4px;
+  font-size: 17px;
+}
+
+.header .search-bar #search:hover {
+  border: 2px solid #cf4d02;
+  transition: 0.3s;
+}
+
+.header .search-bar #search:hover fieldset {
+  border: 5px solid #cf4d02;
+}
+
+.logo {
+  display: flex;
+  float: left;
+  width: 330px;
+  height: 95px;
+}
+
+.logo img {
+  margin: auto;
+  position: relative;
+  padding: 20px 0px 20px 20px;
+}
+
+.logo h2 {
+  text-decoration: none;
+  color: #cf4d02;
+  padding: 0px 0px 10px 0px;
+  text-align: center;
+  margin: auto 10px;
+}
+
+
+
