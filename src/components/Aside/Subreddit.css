@@ -1,0 +1,15 @@
+.subreddits-container {
+  background-color: whitesmoke;
+  margin: 15px;
+  align-content: center;
+}
+
+h2 {
+  width: 180px;
+  height: 35px;
+}
+
+.subreddits-lists {
+  list-style: none;
+  align-items: center;
+}

@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from '../../logo.svg';
-import { Link } from 'react-router-dom';
 import './Header.css'
+import { Link } from 'react-router-dom';
+import { HiOutlineSearch } from "react-icons/hi";
 
 
 const Header = () => {
@@ -11,15 +12,18 @@ const Header = () => {
         <Link to ='/'>
           <img src={logo} />
         </Link>
-        <h2>Reddit Redduced</h2>
+        <p>Reddit Redduced</p>
       </div>
-      <div className='search-bar'>
-        <input id='search' type="text" placeholder='Search Reddit' name='search'/>
+      <div className='search'>
+        <div className='searchInputs'>
+          <input type="text" placeholder='Search..' name='search'/>
+          <div className='searchIcon'>
+            <HiOutlineSearch />
+          </div>
+        </div>
       </div>
     </div>
   )
 }
-
-
 
 export default Header;
