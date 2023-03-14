@@ -1,15 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+  --color-background: #fcfcfc;
+  --color-background-secondary: #f3f3f3;
+  --color-foreground: #fff;
+  --color-border: #e6e6e6;
+  --color-text-header: #cf4d02;
+  --color-text-body: #6f6f6f;
+  --color-text-secondary: #717171;
+  --color-text-invert: #fff;
+  --color-text-link: #4ec3f5;
+  --color-branding: #3d5af1;
+  --color-branding-transparent: rgba(61,90,241,0.25);
+  --color-alert: #ff304f;
+  --color-success: #45b81f;
+  --color-on-hover: #0000000f;
+  --box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05)!important;
+  --box-shadow-hover: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04)!important;
+  --spacing-0: 4px;
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 36px;
+  --spacing-5: 64px;
+  --radius: 4px;
+  --radius-2: 8px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
 }
 
-.App {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-gap: 16px;
+body {
+  background-color: var(--color-background);
+  font-family: 'Poppins', sans-serif;
 }
 
+.main-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-container {
+  padding-bottom: 25px;
+}
 
 

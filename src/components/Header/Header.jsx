@@ -12,7 +12,7 @@ const Header = () => {
         <Link to ='/'>
           <img src={logo} />
         </Link>
-        <p>Reddit Redduced</p>
+        <p>RedditMinimal</p>
       </div>
       <div className='search'>
         <div className='searchInputs'>

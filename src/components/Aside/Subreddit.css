@@ -1,12 +1,14 @@
 .subreddits-container {
-  background-color: whitesmoke;
-  margin: 15px;
-  align-content: center;
+  background-color: var(--color-background);
+  padding: var(--spacing-3);
+  box-shadow: var(--box-shadow);
 }
 
 h2 {
   width: 180px;
   height: 35px;
+  font-weight: bolder;
+  margin-bottom: var(--spacing-2);
 }
 
 .subreddits-lists {

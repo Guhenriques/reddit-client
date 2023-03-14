@@ -22,16 +22,16 @@ const Aside = () => {
     "science",
     "soccer",
     "internetisbeautiful",
-    "dataisbeautiful"
+    "dataisbeautiful",
   ]
 
   return (
     <div className='subreddits-container'>
-      <h2>SubReddits</h2>
+      <h2>Subreddits</h2>
       <ul className='subreddits-lists'>
         {subreddits.map(subreddit => (
           <li><a href={`/r/${subreddit}`}>{subreddit}</a></li>
-        ))};
+        ))}
       </ul>
 
     </div>
