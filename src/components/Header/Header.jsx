@@ -16,7 +16,11 @@ const Header = () => {
       </div>
       <div className='search'>
         <div className='searchInputs'>
-          <input type="text" placeholder='Search..' name='search'/>
+          <input 
+          type="text" 
+          placeholder='Search..' 
+          name='search'
+          />
           <div className='searchIcon'>
             <HiOutlineSearch />
           </div>

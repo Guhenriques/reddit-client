@@ -1,4 +1,15 @@
 .main-article {
   display: flex;
-  width: 75%;
+  flex-wrap: wrap;
+  margin-left: var(--spacing-4);
+  margin-right: var(--spacing-4);
 }
+
+.main-articles {
+  width: 100%;
+  height: 350px;
+  margin-bottom: var(--spacing-4);
+  background-color: var(--color-background);
+  box-shadow: var(--box-shadow);
+}
+

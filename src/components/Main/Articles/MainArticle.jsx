@@ -25,7 +25,19 @@ import { useState, useEffect } from 'react';
 function Article() {
   return (
     <div className='main-article'>
-      <article>
+      <article className='main-articles'>
+        Title
+        {/* {
+          (articles != null) ? articles.map((article, index) => <Article key={index} article={article.data} />) : ''
+        } */}
+      </article>
+      <article className='main-articles'>
+        Title
+        {/* {
+          (articles != null) ? articles.map((article, index) => <Article key={index} article={article.data} />) : ''
+        } */}
+      </article>
+      <article className='main-articles'>
         Title
         {/* {
           (articles != null) ? articles.map((article, index) => <Article key={index} article={article.data} />) : ''

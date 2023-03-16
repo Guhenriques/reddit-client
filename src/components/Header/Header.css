@@ -4,14 +4,14 @@
   height: 80px;
   width: 100%;
   box-shadow: var(--box-shadow);
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
 }
 
 .search {
   display: flex;
-  align-content: center;
   justify-content: center;
+  align-items: center;
 }
 
 .searchInputs {
@@ -21,7 +21,7 @@
 
 .search input {
   height: 30px;
-  width: 400px;
+  width: 300px;
   border-radius: 13px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -63,7 +63,7 @@ input {
 
 .logo {
   display: flex;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   float: left;

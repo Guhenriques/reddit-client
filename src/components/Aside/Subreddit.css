@@ -1,7 +1,8 @@
-.subreddits-container {
+.subreddit-container {
   background-color: var(--color-background);
   padding: var(--spacing-3);
   box-shadow: var(--box-shadow);
+  width: 300px;
 }
 
 h2 {
@@ -11,7 +12,11 @@ h2 {
   margin-bottom: var(--spacing-2);
 }
 
-.subreddits-lists {
+.subreddit-list {
   list-style: none;
   align-items: center;
+}
+
+.subreddit-list li {
+  padding: var(--spacing-1);
 }

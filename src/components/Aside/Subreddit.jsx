@@ -26,9 +26,9 @@ const Aside = () => {
   ]
 
   return (
-    <div className='subreddits-container'>
+    <div className='subreddit-container'>
       <h2>Subreddits</h2>
-      <ul className='subreddits-lists'>
+      <ul className='subreddit-list'>
         {subreddits.map(subreddit => (
           <li><a href={`/r/${subreddit}`}>{subreddit}</a></li>
         ))}

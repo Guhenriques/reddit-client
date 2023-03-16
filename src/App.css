@@ -34,7 +34,7 @@
 }
 
 body {
-  background-color: var(--color-background);
+  background-color: var(--color-background-secondary);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -47,4 +47,6 @@ body {
   padding-bottom: 25px;
 }
 
-
+.main-content {
+  width: 1550px;
+}

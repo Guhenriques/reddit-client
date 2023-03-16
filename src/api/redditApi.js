@@ -1,55 +1,47 @@
+export const API_ROOT = 'https://www.reddit.com';
 
-// import React, { useEffect } from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import { useParams } from "react-router-dom";
-// import {
-//   selectAllPosts,
-//   selectStatus,
-//   fetchPosts,
-//   fetchPostsBasedOnSearchTerm,
-// } from "../../features/postsSlice";
-// import { selectFilter, changeFilter } from "../../features/filterSlice";
-// import { selectSearchTerm, changeSearchTerm } from "../../features/searchSlice";
+// get top subreddits for side bar
+export const getTopSubreddits = async () => {
+    const response = await fetch(`${API_ROOT}/subreddits.json`);
+    const json = await response.json();
+    return json.data.children.map(subreddit => subreddit.data);
+}
 
-// import { SinglePost } from "./singlePost/SinglePost";
-// import { Spinner } from "../spinner/spinner-1/Spinner";
+// get posts for selected subreddit
+export const getPosts = async (selectedSubreddit) => {
+    const response = await fetch(`${API_ROOT}/r/${selectedSubreddit}/.json?limit=30`);
+    const json = await response.json();
+    return json.data.children.map(post => post.data)
+    
+}
 
-// export const Posts = () => {
-//   const dispatch = useDispatch();
-//   const posts = useSelector(selectAllPosts);
-//   const status = useSelector(selectStatus);
-//   const filter = useSelector(selectFilter);
-//   const url = useParams();
+// get more posts for selected subreddit
+export const getMorePosts = async (selectedSubreddit, lastPostId) => {
+    const response = await fetch(`${API_ROOT}/r/${selectedSubreddit}/.json?limit=30&after=${lastPostId}`);
+    const json = await response.json();
+    return json.data.children.map(post => post.data)
+    
+}
 
-//   const { subreddit } = useParams();
-//   const searchTerm = useSelector(selectSearchTerm);
+// get comments for clicked post
+export const getComments = async (permalink) => {
+    const response = await fetch(`${API_ROOT}${permalink}.json?limit=100`);
+    const json = await response.json();
+    return json[1].data.children.map(comment => comment)
 
-//   useEffect(() => {
-//     const payload = { filter, subreddit: subreddit ? subreddit : "popular" };
-//     if (url.searchTerm) {
-//       dispatch(fetchPostsBasedOnSearchTerm(searchTerm));
-//       dispatch(changeFilter({ nameOfFilter: 'hot' }));
-//       return;
-//     } else {
-//       dispatch(fetchPosts(payload));
-//       dispatch(changeSearchTerm({ searchTerm: "" }));
-//       return;
-//     }
-//   }, [filter, url, dispatch, searchTerm, subreddit]);
+}
 
-//   if (status === "loading") {
-//     return <Spinner />;
-//   }
+// get search results based on input in the search bar
+export const getResults = async (searchQuery) => {
+    const response = await fetch(`${API_ROOT}/search.json?q=${searchQuery}&type=sr&include_over_18=1`);
+    const json = await response.json();
+    return json.data.children.map(subreddit => subreddit.data)
+}
 
-//   if (status === "succeeded") {
-//     return (
-//       <>
-//         {posts.map((post, id) => (
-//           <SinglePost key={id} {...post} />
-//         ))}
-//       </>
-//     );
-//   }
-// };
-
-
+// get post data based on current location - when user refreshes or manually inputs post id into url
+export const getPostData = async (currentLocation) =>{
+        const response = await fetch(`${API_ROOT}${currentLocation}.json`);
+        const json = await response.json();
+        const postData =  await json[0].data.children[0].data
+        return postData
+}
