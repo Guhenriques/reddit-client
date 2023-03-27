@@ -9,8 +9,10 @@ const Header = () => {
   return (
     <div className='header'>
       <div className='logo'>
-        <Link to ='/'>
-          <img src={logo} />
+        <Link to ='/' className='link-to'>
+          <img 
+          src={logo}
+          />
         </Link>
         <p>RedditMinimal</p>
       </div>

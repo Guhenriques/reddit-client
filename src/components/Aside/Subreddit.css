@@ -2,7 +2,7 @@
   background-color: var(--color-background);
   padding: var(--spacing-3);
   box-shadow: var(--box-shadow);
-  width: 300px;
+  width: 250px;
 }
 
 h2 {

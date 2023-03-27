@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from './components/Header/Header';
-import Article from './components/Main/Articles/MainArticle';
+import { Article, Comments } from './components/Main/Articles/MainArticle';
 import Aside from './components/Aside/Subreddit';
 import Footer from './components/Footer/Footer';
 import PageNotFound from './components/Main/PageNotFound/PageNotFound';

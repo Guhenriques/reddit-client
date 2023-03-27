@@ -16,6 +16,7 @@ const Aside = () => {
     fetchApi()
   }, [])
 
+// just to check the data path 
   console.log('subReddit:', subReddits?.data?.children)
 
   return (
@@ -23,7 +24,7 @@ const Aside = () => {
       <h2>Subreddits</h2>
       <ul className='subreddit-list'>
         {subReddits?.data?.children.map(subReddit => ( 
-          <li><a href={`${subReddit.data.permalink}`}>{subReddit.data.subreddit}</a></li>
+          <li key={subReddit.data.id}><a href={`${subReddit.data.permalink}`}>{subReddit.data.subreddit}</a></li>
         ))}
       </ul>
     </div>
